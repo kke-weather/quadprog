@@ -24,13 +24,15 @@ classifiers = [
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Topic :: Scientific/Engineering :: Mathematics"
 ]
 
 extensions = [Extension('quadprog', [
     'quadprog/linear-algebra.c',
     'quadprog/qr-update.c',
-    'quadprog/quadprog.c',
+    'quadprog/quadprog.pyx',
     'quadprog/solve.QP.c',
 ])]
 
