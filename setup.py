@@ -33,11 +33,12 @@ extensions = [Extension('quadprog', [
     'quadprog/qr-update.c',
     'quadprog/quadprog.pyx',
     'quadprog/solve.QP.c',
-])]
+    'quadprog/simplex.c',
+], depends=['quadprog/simplex.h'])]
 
 setup(
     name="quadprog",
-    version="0.1.14",
+    version="0.1.14+kke.simplex1",
     python_requires=">=3.11",
     description="Quadratic Programming Solver",
     long_description=long_description,

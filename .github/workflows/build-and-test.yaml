@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [master, main, py311]
   pull_request:
-    branches: [master]
+    branches: [master, main, py311]
   workflow_dispatch:
 
 defaults:

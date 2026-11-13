@@ -49,6 +49,7 @@ jobs:
           retention-days: 1
 
   upload_to_pypi:
+    if: github.repository == 'quadprog/quadprog'
     name: Upload to Test PyPI
     needs: [build_wheels, build_sdist]
     runs-on: ubuntu-latest
