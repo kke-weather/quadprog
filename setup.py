@@ -20,12 +20,11 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Topic :: Scientific/Engineering :: Mathematics"
 ]
 
@@ -34,11 +33,13 @@ extensions = [Extension('quadprog', [
     'quadprog/qr-update.c',
     'quadprog/quadprog.pyx',
     'quadprog/solve.QP.c',
-])]
+    'quadprog/simplex.c',
+], depends=['quadprog/simplex.h'])]
 
 setup(
     name="quadprog",
-    version="0.1.11",
+    version="0.1.14+kke.simplex1",
+    python_requires=">=3.11",
     description="Quadratic Programming Solver",
     long_description=long_description,
     url="https://github.com/quadprog/quadprog",

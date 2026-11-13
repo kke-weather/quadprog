@@ -1,3 +1,6 @@
 [build-system]
 requires = ["setuptools", "wheel", "Cython"]
 build-backend = "setuptools.build_meta"
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { file = "setup.py" }, { file = "quadprog/*.pyx" }, { file = "quadprog/*.c" }, { file = "quadprog/*.h" }]
